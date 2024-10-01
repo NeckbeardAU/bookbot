@@ -4,9 +4,9 @@ def main():
     book_path = "books/frankenstein.txt"
     text = get_book_text(book_path)
     print(text)
-    get_word_count(text)
-    char_count(text)
-
+    wc = get_word_count(text)
+    char_cnt = char_count(text)
+    bookreport(wc, char_cnt)
 
 def get_book_text(path):
     with open(path) as f:
@@ -30,5 +30,11 @@ def char_count(words):
                 char_dict[char] = counter
     return char_dict
             
+def book_report(word_count, char_dict):
+    print("--- Begin report of books/frankenstein.txt ---")
+    print(f"{word_count} words found in the document.")
+    for k, v in char_dict:
+        print(f"The '{k}' character was found {v} times")
+    print("--- End report ---")
 
 main()
