@@ -6,7 +6,7 @@ def main():
     print(text)
     wc = get_word_count(text)
     char_cnt = char_count(text)
-    bookreport(wc, char_cnt)
+    book_report(wc, char_cnt)
 
 def get_book_text(path):
     with open(path) as f:
