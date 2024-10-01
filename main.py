@@ -33,7 +33,7 @@ def char_count(words):
 def book_report(word_count, char_dict):
     print("--- Begin report of books/frankenstein.txt ---")
     print(f"{word_count} words found in the document.")
-    for k, v in char_dict:
+    for k, v in char_dict.items():
         print(f"The '{k}' character was found {v} times")
     print("--- End report ---")
 
